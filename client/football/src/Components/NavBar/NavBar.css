@@ -1,0 +1,15 @@
+.nav-grid{
+ background-color: black;
+ height: 10vh;
+ width: 100vw;
+}
+.nav-grid > p{
+ width: 100vw;
+ height: 100%;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ color: white;
+ font-size: 35px;
+ padding-left: 25px;
+}
