@@ -7,7 +7,6 @@ const Landing = () => {
   
     return (
       <>
-          <NavBar/> 
       <div className='landing-div-all' >
         <div className='landing-h2'>
   <h2 class="neon">Search </h2>

@@ -1,0 +1,10 @@
+.displayer-div{
+    height: 90vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-image: url('https://giffiles.alphacoders.com/211/211931.gif');
+    background-size: cover;
+}

@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from "react-redux";
 import { ChakraProvider } from "@chakra-ui/react"
+import store from './Redux/Store'
 
 // import store from './store/store'
 ReactDOM.render(
-  // <Provider store={store}>
-  <ChakraProvider>
+  <Provider store={store}>
     <BrowserRouter>
+  <ChakraProvider>
     <App />
-    </BrowserRouter>
     </ChakraProvider>
-    // </Provider>
+    </BrowserRouter>
+     </Provider>
     ,
   document.getElementById('root')
 );

@@ -1,0 +1,50 @@
+.displayerform-box{
+    height: 15vh;
+    width: 70vw;
+    min-width: 230px;
+    border-color: #FB4264;
+    border-style: solid;
+    border-width: 3px;
+    margin: 1vw;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: blanchedalmond;
+}
+.displayerform-div>h2{
+    font-family: 'Bangers', cursive;
+    font-size: 1.8vw;
+    text-align: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+white-space: nowrap;
+}
+/* .displayerform-div>h2:hover{
+    
+} */
+.displayerform-div>div{
+    display: flex;
+}
+.displayerform-div>div>h3{
+    font-family: 'Bangers', cursive;
+    text-align: start;
+    font-size: 17px;
+    margin-left: 3px;
+}
+.displayerform-div>div>p{
+    margin-left:10px;
+    font-size: 15px;
+}
+.displayerform-div{
+    min-height: 150px;
+}
+.displayerform-div>div>h4{
+   text-align: center;
+   margin-left: 10px;
+   font-size: 15px;
+}
+.displayerform-image{
+    margin-top: 2vh;
+    width: 100%;
+    height: 30vh;
+    border-radius: 8px;
+}
