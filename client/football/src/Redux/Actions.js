@@ -7,9 +7,20 @@ export const getGames = () => {
     }
 }
 
-export const getSubscribers = () => {
+export const getGenres = () => {
     return async (dispatch) => {
-        const users = await axios.get('/admin/sub')
-        dispatch({ type: 'GET_SUBSCRIBERS', payload: users.data})
+        const genres = await axios.get('http://localhost:3001/genres')
+        dispatch({ type: 'GET_GENRES', payload: genres.data})
+    }
+}
+export const searchTitle = (title) => {
+    return async (dispatch) => {
+        const resp = await axios.get('http://localhost:3001/search?name='+ title)
+        if (typeof resp.data === 'string') {
+            return alert(resp.data)
+        }
+        else{
+            dispatch({ type: 'SEARCH', payload: resp.data})
+        }
     }
 }

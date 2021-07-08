@@ -6,7 +6,7 @@ import rootReducer from "./Reducer";
 import { save, load, clear } from "redux-localstorage-simple"
 
 const store = createStore(
-  rootReducer,load(),
+  rootReducer,
   composeWithDevTools(applyMiddleware(save(),logger,thunk))
 );
 

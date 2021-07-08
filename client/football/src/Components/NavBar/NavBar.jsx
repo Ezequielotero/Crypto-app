@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './NavBar.css'
+import Searchbar from './Searchbar/Searchbar';
 const NavBar = () => {
     const [width, setWidth] = useState(0);
 
@@ -13,7 +14,7 @@ const NavBar = () => {
   })
     return (
         <div className='nav-grid'>
-          <p>text</p> 
+          <Searchbar></Searchbar>
         </div>
     )
 }

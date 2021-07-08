@@ -10,6 +10,7 @@ router.use(cors());
 
 let array=[] 
 router.get('/', async (req, res) => {
+     array=[]
     let resp = await axios.get('https://api.rawg.io/api/genres?key=39b9c8b123814fd0a48b1daed2d5b953')
     resp.data.results.forEach(game => {
         array.push({
