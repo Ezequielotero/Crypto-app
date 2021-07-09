@@ -2,14 +2,17 @@ import React, { useEffect , useState } from 'react'
 import './Filters.css'
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { getGenres } from '../../../../Redux/Actions'
+import { order } from '../../../../Redux/Actions'
 import { useDispatch , useSelector} from 'react-redux';
 const Filters = ({status}) => {
   let dispatch=useDispatch()
   const genres = useSelector(state => state.genres)
+  const all = useSelector(state => state.all)
   useEffect(()=>{
     if(!genres[0]){
         dispatch(getGenres())
@@ -23,7 +26,9 @@ setOrders(e.target.value)
 const handleGenres =(e)=>{
   setGenreSelected(e.target.value)
 }
-console.log(orders)
+const handleFilter =(e)=>{
+   dispatch(order(all,orders,genreSelected))
+}
     return (
         <div className='filters-box'>
               <FormControl >
@@ -50,6 +55,7 @@ console.log(orders)
               })
           }
         </Select>
+        <button onClick={handleFilter}>ok</button>
         </FormControl>
         </div>
     )

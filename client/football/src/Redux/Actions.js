@@ -24,3 +24,17 @@ export const searchTitle = (title) => {
         }
     }
 }
+export const order =(array,order,genre)=>{
+    return (dispatch) => {
+        if (order==='up') {
+            array.sort((a, b) => a.rating < b.rating ? 1 : b.rating < a.rating ? -1 : 0)
+        }
+        if (order==='down') {
+            array.sort((a, b) =>a.rating > b.rating ? 1 : b.rating > a.rating ? -1 : 0)
+        }
+        if (genre) {
+           array= array.filter((p)=>p.genres.includes(genre))
+        }
+        dispatch({type:'FILTERED',payload:array})
+    }
+}

@@ -7,7 +7,7 @@ import { save, load, clear } from "redux-localstorage-simple"
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(save(),logger,thunk))
+  composeWithDevTools(applyMiddleware(logger,thunk))
 );
 
 
