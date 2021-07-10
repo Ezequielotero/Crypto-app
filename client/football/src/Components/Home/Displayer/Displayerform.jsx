@@ -1,8 +1,17 @@
 import React from 'react'
 import './Displayerform.css'
+import { useHistory } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import { searchDetail } from '../../../Redux/Actions';
 const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
+    const dispatch = useDispatch()
+    const history =useHistory()
+    const handleClick=()=>{
+        dispatch(searchDetail(id))
+        history.push('detail')
+    }
     return (
-        <div className='displayerform-box' id={id}>
+        <div className='displayerform-box' onClick={handleClick} id={id}>
                     <div className='displayerform-div'>
                         <div>
                        <div className='displayerform-name'>

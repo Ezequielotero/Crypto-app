@@ -38,3 +38,9 @@ export const order =(array,order,genre)=>{
         dispatch({type:'FILTERED',payload:array})
     }
 }
+export const searchDetail = (id) => {
+    return async (dispatch) => {
+        const resp = await axios.get('http://localhost:3001/detail/'+id)
+        dispatch({ type: 'DETAIL', payload: resp.data})
+    }
+}

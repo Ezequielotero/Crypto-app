@@ -40,9 +40,8 @@ router.get('/', async (req, res) => {
       background:resp.data.background_image,
       description:resp.data.description,
       platforms: resp.data.platforms.map((p) =>  p.platform.name),
-      minimun: resp.data.minimum,
-      recommended:resp.data.recommended,
-      // short_screenshots: resp.data.short_screenshots.map((p) =>  p.image)
+      requirements:resp.data.platforms.filter((p)=> p.platform.name==='PC'),
+      genres: resp.data.genres.map((p) =>  p.name),
     })
     res.send(array)
  })
