@@ -1,0 +1,34 @@
+
+:root {
+    --neon-border-color: #426DFB;
+  }
+  .filters-box2 {
+    background-color: white;
+    color: #fff;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+    width: 37vw;
+    min-width: 500px;
+    height: 50vh;  
+    display: flex;   
+  }
+  .detail-img{
+    border-radius: 1.6rem;
+  }
+  .detail-div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .detail-realising{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .detail-name{
+      display: flex;
+      justify-content: center;
+  }
