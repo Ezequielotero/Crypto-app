@@ -12,15 +12,20 @@
     width: 37vw;
     min-width: 500px;
     height: 50vh;  
-    display: flex;   
+    display: flex; 
+    justify-content: flex-start;  
   }
   .detail-img{
     border-radius: 1.6rem;
   }
   .detail-div{
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-wrap: wrap;
+     padding: 3vw;
+  }
+  .detail-div2{
+    display: flex;
+    flex-direction: column;
   }
   .detail-realising{
       display: flex;

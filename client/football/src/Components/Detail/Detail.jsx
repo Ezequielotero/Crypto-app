@@ -13,25 +13,28 @@ const Detail = () => {
         setChecked(e.target.value)
     }
     return (
-        <div className='detail-div'>
-             
+        <div >
+             <div className='detail-div'>
+
+                 <div className='filters-box2'>
+                <img className='detail-img' src={detail[0]?.background} alt="" />
+                 </div>
+                 <div className='detail-div2'>
                  <div className='detail-name' >
                 <h3>{detail[0]?.name}</h3>
                  </div>
                  <div className='detail-realising'>
                  <h2>Realising date</h2>
                 <h2>{detail[0]?.released}</h2>
-                 <div className='filters-box2'>
-                <img className='detail-img' src={detail[0]?.background} alt="" />
                  </div>
-                 </div>
-                 <div>
-                 <p>{detail[0]?.description}</p>
                  <p>{detail[0]?.platforms.join(', ')}</p>
                  <p>{detail[0]?.genres.join(', ')}</p>
+                 <div>
+             </div>
                  </div>
-                
-                <button onClick={handleClick} value='checked'>ok</button>
+                 <p>{detail[0]?.description}</p>
+                 
+                 </div>
         </div>
     )
 }
