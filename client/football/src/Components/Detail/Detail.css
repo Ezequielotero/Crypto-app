@@ -1,7 +1,8 @@
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
 
-:root {
-    --neon-border-color: #426DFB;
-  }
   .filters-box2 {
     background-color: white;
     color: #fff;
@@ -13,27 +14,68 @@
     min-width: 500px;
     height: 50vh;  
     display: flex; 
-    justify-content: flex-start;  
+    margin-bottom: 15px;
+  }
+  .filters-box3{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .detail-img{
     border-radius: 1.6rem;
   }
   .detail-div{
-      display: flex;
-      flex-wrap: wrap;
+     display: flex;
+     flex-wrap: wrap;
      padding: 3vw;
+     justify-content: center; 
+     background-image: url('https://giffiles.alphacoders.com/211/211931.gif');
+     background-size: cover;
+    
   }
   .detail-div2{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .detail-realising{
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      flex-direction: column;
       align-items: center;
+       font-family: 'Bangers', cursive;
+    font-size: 20px;
+    background: rgb(#8E00C4);
+background: linear-gradient(0deg, #8E00C4 0%, rgba(255,255,255,1) 100%);
+border-radius: 8px;
+ padding: 3vw;
+  }
+  .detail-realising p{
+    margin-bottom: 15px;
+    opacity: 100%;
+  }
+  .detail-realising>h3{
+    font-size: 15px;
   }
   .detail-name{
-      display: flex;
-      justify-content: center;
+      font-family: 'Bangers', cursive;
+    font-size: 30px;
   }
+  .flux2 {
+    font-family: neon;
+    color: #3720c9;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 3vw #3720c9;
+  }
+  
+  .flux2 {
+    animation: neon 3s ease infinite;
+    -moz-animation: neon 3s ease infinite;
+    -webkit-animation: neon 3s ease infinite;
+  }
+  
+ 
+  

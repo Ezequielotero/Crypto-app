@@ -12,28 +12,31 @@ const Detail = () => {
     const handleClick =(e)=>{
         setChecked(e.target.value)
     }
+    console.log(detail[0].requirements[0].requirements.minimum)
     return (
         <div >
              <div className='detail-div'>
-
+                 <div className='detail-div2'>
+                 <div className='detail-name' >
+                <h3 className='flux2'>{detail[0]?.name}</h3>
+                 </div>
+                 <div className='filters-box3'>
                  <div className='filters-box2'>
                 <img className='detail-img' src={detail[0]?.background} alt="" />
                  </div>
-                 <div className='detail-div2'>
-                 <div className='detail-name' >
-                <h3>{detail[0]?.name}</h3>
-                 </div>
+                </div>
                  <div className='detail-realising'>
-                 <h2>Realising date</h2>
-                <h2>{detail[0]?.released}</h2>
+                 <p>Realising date: {detail[0]?.released} </p>
+                 <p>Platforms: {detail[0]?.platforms.join(', ')}</p>
+                 <p>Genres: {detail[0]?.genres.join(', ')}</p>
+                 <h3>{detail[0]?.description.replace(/(<([^>]+)>)/ig, '')}</h3>
+                 <p>Minimun requirements: {detail[0].requirements[0].requirements.minimum}</p>
+                 <p>recommended requirements: {detail[0].requirements[0].requirements.recommended}</p>
+                 
                  </div>
-                 <p>{detail[0]?.platforms.join(', ')}</p>
-                 <p>{detail[0]?.genres.join(', ')}</p>
                  <div>
              </div>
                  </div>
-                 <p>{detail[0]?.description}</p>
-                 
                  </div>
         </div>
     )

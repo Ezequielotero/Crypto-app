@@ -24,19 +24,19 @@
   text-shadow: 0 0 3vw #2356FF;
 }
 .neon {
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
 }
 @keyframes neon {
   0%,
   100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
+    text-shadow: 0 0 1vw #B900FF, 0 0 3vw #8800BB, 0 0 10vw #8800BB, 0 0 10vw #8800BB, 0 0 .4vw #D300BA, .5vw .5vw .1vw #630188;
+    color: #D300BA;
   }
   50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
+    text-shadow: 0 0 .5vw #5F0185, 0 0 1.5vw #5F0185, 0 0 5vw #5F0185, 0 0 5vw #5F0185, 0 0 .2vw #5F0185, .5vw .5vw .1vw #8500BB;
+    color: #8500BB;
   }
 }
 .flux {
