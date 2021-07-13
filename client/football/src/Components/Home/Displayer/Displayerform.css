@@ -3,13 +3,12 @@
     width: 45vw;
     min-width: 600px;
     min-height: 90px;
-    border-color: #FB4264;
-    border-style: solid;
+    border-style: none;
     border-width: 3px;
     margin: 1vw;
     padding: 9px;
     border-radius: 8px;
-    background-color: blanchedalmond;
+    background-color: #8E00C4;
     display: flex;
 }
 .displayerform-div{
@@ -20,6 +19,7 @@
     font-family: 'Bangers', cursive;
     font-size: 25px;
     text-align: start;
+    color: white;
 }
 
 .displayerform-platforms{
@@ -34,13 +34,15 @@ white-space: nowrap;
     margin-left: 3px;
     margin-right: 7px;
     align-items: center;
+    color: white;
 }
 .displayerform-platforms p{
     width: 300px;
     min-width: 300px;
     overflow:hidden;
 white-space: nowrap;
-text-overflow: ellipsis
+text-overflow: ellipsis;
+color: white;
 }
 .displayerform-rating h3{
     font-family: 'Bangers', cursive;
@@ -49,6 +51,10 @@ text-overflow: ellipsis
     margin-left: 3px;
     margin-right: 7px;
     align-items: center;
+    color: white;
+}
+.displayerform-rating p{
+    color: white;
 }
 .displayerform-rating{
     display: flex;

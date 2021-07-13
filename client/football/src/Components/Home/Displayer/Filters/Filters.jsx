@@ -20,11 +20,15 @@ const Filters = ({status}) => {
 },[genres])
 const [orders, setOrders]=useState('')
 const [genreSelected, setGenreSelected]=useState('')
+const [plaftorm, setPlatform]=useState('')
 const handleOrders =(e)=>{
 setOrders(e.target.value)
 }
 const handleGenres =(e)=>{
   setGenreSelected(e.target.value)
+}
+const handlePlatforms =(e)=>{
+  setPlatform(e.target.value)
 }
 const handleFilter =(e)=>{
    dispatch(order(all,orders,genreSelected))
@@ -55,8 +59,22 @@ const handleFilter =(e)=>{
               })
           }
         </Select>
-        <button onClick={handleFilter}>ok</button>
         </FormControl>
+        <FormControl >
+            <InputLabel id="demo-simple-select-label">Platforms</InputLabel>
+        <Select
+        onClick={handleGenres}
+        className='filters-menu'
+          id="demo-simple-select"
+        >
+          {
+              genres&&genres.map((g)=>{
+                return <MenuItem  value={g.name}>{g.name}</MenuItem>
+              })
+          }
+        </Select>
+        </FormControl>
+        <button onClick={handleFilter}>ok</button>
         </div>
     )
 }

@@ -7,6 +7,7 @@ const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
     const dispatch = useDispatch()
     const history =useHistory()
     const handleClick=()=>{
+        dispatch({ type: 'RESET', payload: '' })
         dispatch(searchDetail(id))
         history.push('detail')
     }
@@ -23,7 +24,7 @@ const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
                         </div>
                         <div className='displayerform-rating'>
                         <h3>Rating:</h3> 
-                    <h4>{rating}</h4>
+                    <p>{rating}</p>
                         </div>
                         </div>
                    

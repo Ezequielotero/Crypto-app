@@ -1,0 +1,10 @@
+.searchbar-div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 1vw;
+}
+.searchbar-input{
+    background-color: white;
+    border-radius: 8px;
+}

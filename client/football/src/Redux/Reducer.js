@@ -28,8 +28,8 @@ const rootReducer = (state = initialState, action) => {
       if (action.type === "RESET") {
         return {
           ...state,
-         all:[],
-         maped:[]
+         
+         detail:[]
         };
       }
       if (action.type === "FILTERED") {

@@ -5,14 +5,9 @@ import Grow from '@material-ui/core/Grow';
 import './Detail.css'
 const Detail = () => {
     const detail = useSelector(state => state.detail)
-    const [checked, setChecked]=useState('')
     if (!detail[0]) {
-        return '<h1>porfavor elija un juego</h1>'
+        return <Loading/>
     }
-    const handleClick =(e)=>{
-        setChecked(e.target.value)
-    }
-    console.log(detail[0].requirements[0].requirements.minimum)
     return (
         <div >
              <div className='detail-div'>
@@ -30,14 +25,15 @@ const Detail = () => {
                  <p>Platforms: {detail[0]?.platforms.join(', ')}</p>
                  <p>Genres: {detail[0]?.genres.join(', ')}</p>
                  <h3>{detail[0]?.description.replace(/(<([^>]+)>)/ig, '')}</h3>
-                 <p>Minimun requirements: {detail[0].requirements[0].requirements.minimum}</p>
-                 <p>recommended requirements: {detail[0].requirements[0].requirements.recommended}</p>
+                 <p>Minimun requirements: {detail[0].requirements[0].requirements.minimum ||'We dont have pc requirements'}</p>
+                 <p>recommended requirements: {detail[0].requirements[0].requirements.recommended|| 'We dont have pc requirements'} </p>
                  
                  </div>
                  <div>
              </div>
                  </div>
                  </div>
+      
         </div>
     )
 }
