@@ -10,7 +10,7 @@ import Detail from './Components/Detail/Detail';
 function App() {
   return (
     <div>
-   <Route path='/home'><NavBar/></Route>
+   <Route path='/'><NavBar/></Route>
    <Route exact path='/'><Landing/></Route>
    <Route path='/home'><Home/></Route>
    <Route path='/detail'><Detail/></Route>

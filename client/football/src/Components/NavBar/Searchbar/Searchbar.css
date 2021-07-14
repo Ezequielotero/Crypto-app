@@ -1,8 +1,9 @@
 .searchbar-div{
     display: flex;
     height: 100%;
+    width: 300px;
     align-items: center;
-    padding: 1vw;
+    padding: 2vw;
 }
 .searchbar-input{
     background-color: white;

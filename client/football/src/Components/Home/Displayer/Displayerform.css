@@ -28,7 +28,7 @@
 white-space: nowrap;
 }
 .displayerform-platforms h3{
-    font-family: 'Bangers', cursive;
+    font-weight:bold;
     text-align: start;
     font-size: 17px;
     margin-left: 3px;
@@ -45,7 +45,7 @@ text-overflow: ellipsis;
 color: white;
 }
 .displayerform-rating h3{
-    font-family: 'Bangers', cursive;
+    font-weight:bold;
     text-align: start;
     font-size: 17px;
     margin-left: 3px;
