@@ -44,16 +44,20 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-       font-family: 'Bangers', cursive;
     font-size: 20px;
-    background: rgb(#8E00C4);
-background: linear-gradient(0deg, #8E00C4 0%, rgba(255,255,255,1) 100%);
+    background: rgb(142,0,196);
+    background: linear-gradient(0deg, rgba(142,0,196,1) 0%, rgba(177,79,214,1) 0%, rgba(255,255,255,1) 100%);
 border-radius: 8px;
  padding: 3vw;
   }
   .detail-realising p{
     margin-bottom: 15px;
     opacity: 100%;
+    text-align: center;
+    
+  }
+  .detail-realising p h2{
+    font-weight: 600;
   }
   .detail-realising>h3{
     font-size: 15px;
