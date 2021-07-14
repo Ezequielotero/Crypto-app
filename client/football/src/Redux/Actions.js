@@ -24,7 +24,13 @@ export const searchTitle = (title) => {
         }
     }
 }
-export const order =(array,order,genre)=>{
+export const getPlatforms = () => {
+    return async (dispatch) => {
+        const resp = await axios.get('http://localhost:3001/platforms')
+        dispatch({ type: 'PLATFORMS', payload: resp.data})
+    }
+}
+export const order =(array,order,genre,platform)=>{
     return (dispatch) => {
         if (order==='up') {
             array.sort((a, b) => a.rating < b.rating ? 1 : b.rating < a.rating ? -1 : 0)
@@ -35,6 +41,9 @@ export const order =(array,order,genre)=>{
         if (genre) {
            array= array.filter((p)=>p.genres.includes(genre))
         }
+        if (platform) {
+            array= array.filter((p)=>p.platforms.includes(platform))
+         }
         dispatch({type:'FILTERED',payload:array})
     }
 }

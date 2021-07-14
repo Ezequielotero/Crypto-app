@@ -6,16 +6,18 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { getGenres } from '../../../../Redux/Actions'
+import { getGenres, getPlatforms } from '../../../../Redux/Actions'
 import { order } from '../../../../Redux/Actions'
 import { useDispatch , useSelector} from 'react-redux';
 const Filters = ({status}) => {
   let dispatch=useDispatch()
   const genres = useSelector(state => state.genres)
   const all = useSelector(state => state.all)
+  const platforms = useSelector(state => state.platforms)
   useEffect(()=>{
     if(!genres[0]){
         dispatch(getGenres())
+        dispatch(getPlatforms())
     }
 },[genres])
 const [orders, setOrders]=useState('')
@@ -31,8 +33,9 @@ const handlePlatforms =(e)=>{
   setPlatform(e.target.value)
 }
 const handleFilter =(e)=>{
-   dispatch(order(all,orders,genreSelected))
+   dispatch(order(all,orders,genreSelected,plaftorm))
 }
+console.log(plaftorm)
     return (
         <div className='filters-box'>
               <FormControl >
@@ -63,13 +66,13 @@ const handleFilter =(e)=>{
         <FormControl >
             <InputLabel id="demo-simple-select-label">Platforms</InputLabel>
         <Select
-        onClick={handleGenres}
+        onClick={handlePlatforms}
         className='filters-menu'
           id="demo-simple-select"
         >
           {
-              genres&&genres.map((g)=>{
-                return <MenuItem  value={g.name}>{g.name}</MenuItem>
+              platforms&&platforms.map((p)=>{
+                return <MenuItem  value={p.name}>{p.name}</MenuItem>
               })
           }
         </Select>

@@ -2,7 +2,8 @@ const initialState = {
    all:[],
    genres:[],
    maped:[],
-   detail:[]
+   detail:[],
+   platforms:[]
 }
 const rootReducer = (state = initialState, action) => {
     if (action.type === "GET_GAMES") {
@@ -42,6 +43,12 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
          detail:action.payload
+        };
+      }
+      if (action.type === "PLATFORMS") {
+        return {
+          ...state,
+         platforms:action.payload
         };
       }
       else return state;
