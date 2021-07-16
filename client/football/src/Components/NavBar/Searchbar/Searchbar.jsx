@@ -13,11 +13,10 @@ const Searchbar = () => {
         setState(e.target.value)
     }
     const handlePost = (e)=>{
-        console.log('hola')
+        dispatch({ type: 'RESET_ALL', payload: '' })
         dispatch(searchTitle(state))
     }
     const handleReset = (e)=>{
-        dispatch({ type: 'RESET', payload: '' })
         dispatch(getGames())
     }
     return (

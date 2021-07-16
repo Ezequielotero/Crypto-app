@@ -40,11 +40,15 @@ export const order =(array,order,genre,platform)=>{
         }
         if (genre) {
            array= array.filter((p)=>p.genres.includes(genre))
+           if(array.length===0) alert('none')
         }
         if (platform) {
             array= array.filter((p)=>p.platforms.includes(platform))
+            if(array.length===0) alert('none')
          }
-        dispatch({type:'FILTERED',payload:array})
+         if (array.length>0) {
+             dispatch({type:'FILTERED',payload:array})
+            }
     }
 }
 export const searchDetail = (id) => {

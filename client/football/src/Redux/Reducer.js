@@ -22,6 +22,7 @@ const rootReducer = (state = initialState, action) => {
         
         return {
           ...state,
+          maped:[],
          all:action.payload
         };
 
@@ -31,6 +32,12 @@ const rootReducer = (state = initialState, action) => {
           ...state,
          
          detail:[]
+        };
+      }
+      if (action.type === "RESET_ALL") {
+        return {
+          ...state,
+        all:[]
         };
       }
       if (action.type === "FILTERED") {

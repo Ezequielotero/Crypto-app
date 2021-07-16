@@ -21,11 +21,27 @@
     width: 37vw;
     height: 50vh;  
     display: flex;   
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters-box div{
+    width: 30vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
   }
   .filters-menu{
     width: 10vw;
   }
-  
+  .filter-button{
+    background-color: #b117ee;
+    width: 7vw;
+    height: 7vh;
+    color: white;
+    border-radius: 8px;
+    margin-top: 2vh;
+    min-width: 100px;
+  }
+
   /* Animate neon flicker */
   @keyframes flicker {
       
