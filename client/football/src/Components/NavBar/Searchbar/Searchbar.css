@@ -9,3 +9,12 @@
     background-color: white;
     border-radius: 8px;
 }
+@media (max-width:1000px) {
+    .searchbar-div{
+        display: flex;
+        height: 100%;
+        width: 220px;
+        align-items: center;
+        padding: 2vw;
+    }
+}

@@ -18,8 +18,11 @@
 .displayerform-name{
     font-family: 'Bangers', cursive;
     font-size: 25px;
+    max-width: 390px;
     text-align: start;
     color: white;
+white-space: nowrap;
+text-overflow: ellipsis;
 }
 
 .displayerform-platforms{
@@ -60,7 +63,6 @@ color: white;
     display: flex;
 }
 .displayerform-image{
-    
     height: 11vh;
     width: 13vw;
     min-width: 160px;
@@ -72,32 +74,47 @@ color: white;
     justify-content: center;
     align-items: center;
 }
-/* 
-
-.displayerform-div> div >div{
-    display: flex;
-    
-}
-.displayerform-div> div >div>h3{
-    font-family: 'Bangers', cursive;
-    text-align: start;
-    font-size: 17px;
-    margin-left: 3px;
-    align-items: center;
-}
-.displayerform-div>div >div>p{
-    margin-left:10px;
-    font-size: 15px;
-    overflow: hidden;
+@media (max-width:1000px) {
+    .displayerform-box{
+        height: 20vh;
+        width: 40vw;
+        min-width: 270px;
+        min-height: 180px;
+        border-style: none;
+        border-width: 3px;
+        margin: 1vw;
+        padding: 9px;
+        border-radius: 8px;
+        background-color: #8E00C4;
+        display: flex;
+    }
+    .displayerform-div{
+        min-width: none;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .displayerform-name h2{
+        max-width: 250px;
+        text-overflow: ellipsis;
+        overflow:hidden;
 white-space: nowrap;
-width: 350px;
+text-align: center;
+        
+    }
+    .displayerform-name{
+        width: 100%;
+    }
+    .displayerform-rating {
+        width: 100%;
+       
+        justify-content: center;
+        color: white;
+    }
+    .displayerform-image-width{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-.displayerform-div>div >div>h4{
-   text-align: start;
-   margin-left: 10px;
-   font-size: 15px;
-}
-
-
- */

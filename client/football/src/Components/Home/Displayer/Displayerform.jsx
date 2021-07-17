@@ -2,8 +2,9 @@ import React from 'react'
 import './Displayerform.css'
 import { useHistory } from "react-router-dom";
 import {useDispatch} from 'react-redux'
+import { withResizeDetector } from 'react-resize-detector';
 import { searchDetail } from '../../../Redux/Actions';
-const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
+const Displayerform = ({name,platforms,rating,id,short_screenshots, width, height }) => {
     const dispatch = useDispatch()
     const history =useHistory()
     const handleClick=()=>{
@@ -18,10 +19,13 @@ const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
                        <div className='displayerform-name'>
                     <h2>{name}</h2>
                        </div>
-                        <div className='displayerform-platforms'>
+                       {
+                                window.screen.width > 1000?
+                           <div className='displayerform-platforms'>
                         <h3>Platforms:</h3> 
                     <p>{platforms.join(', ')}</p>
-                        </div>
+                        </div>:null
+                        }
                         <div className='displayerform-rating'>
                         <h3>Rating:</h3> 
                     <p>{rating}</p>
@@ -30,11 +34,11 @@ const Displayerform = ({name,platforms,rating,id,short_screenshots}) => {
                    
 <div className='displayerform-image-width'>
 
-                        <img className='displayerform-image' src={short_screenshots} alt="" />
+                        <img className='displayerform-image' src={short_screenshots||'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfY1iPk0T8_6zyq4OpYdjuh6rlVFwLpzJ1fg&usqp=CAU'} alt="" />
 </div>
                         </div>
         </div>
     )
 }
 
-export default Displayerform
+export default withResizeDetector(Displayerform)

@@ -3,7 +3,8 @@ const initialState = {
    genres:[],
    maped:[],
    detail:[],
-   platforms:[]
+   platforms:[],
+   pages:[]
 }
 const rootReducer = (state = initialState, action) => {
     if (action.type === "GET_GAMES") {
@@ -58,6 +59,7 @@ const rootReducer = (state = initialState, action) => {
          platforms:action.payload
         };
       }
+      
       else return state;
 }
 export default rootReducer;

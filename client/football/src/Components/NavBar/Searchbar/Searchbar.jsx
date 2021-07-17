@@ -16,14 +16,11 @@ const Searchbar = () => {
         dispatch({ type: 'RESET_ALL', payload: '' })
         dispatch(searchTitle(state))
     }
-    const handleReset = (e)=>{
-        dispatch(getGames())
-    }
     return (
         <div className='searchbar-div'>
           <Input placeholder="Search videogames" onChange={handleChange} inputProps={{ 'aria-label': 'description' }} />
         <SearchSharpIcon  onClick={handlePost}/>
-            <button onClick={handleReset}>reset</button>
+        
         </div>
     )
 }

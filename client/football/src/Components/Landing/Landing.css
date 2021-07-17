@@ -64,23 +64,27 @@
     flex-direction: column;
     justify-content: center;
 }
-/*
-.landing-h2 > h2{
-   height: 100%;
-   display: flex;
-   flex-direction: row;
-   color: black; 
-   font-size: 40px;
-   font-family: 'Bangers', cursive;
-   font-family: 'Orbitron', sans-serif;
-   letter-spacing: 2px;
-   text-align: center;
-   align-items: center;
-   margin-bottom: 1vh;
+
+@media (max-width: 920px) {
+  .landing-div-all{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .neon {
+    font-family: neon;
+    color: #FB4264;
+    font-size: 13vw;
+    margin-bottom: 2vw;
+    text-shadow: 0 0 3vw #F40A35;
+  }
+  .flux {
+    font-family: neon;
+    color: #426DFB;
+    font-size:13vw;
+margin-top: 2vw;
+    text-shadow: 0 0 3vw #2356FF;
+  }
 }
-.landing-image{
-    height: 60vw;
-    width: 55vw;
-    background-image: url('https://i.insider.com/5de8391cfd9db20b357952c4?width=1200&format=jpeg');
-    background-size: cover;
-} */
