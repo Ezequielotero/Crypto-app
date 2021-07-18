@@ -50,11 +50,11 @@ const Displayer = ({ width, height }) => {
         return (
             <div className='displayer-box'>
         <div className='displayer-div'>
-            {/* {
+            {
                 window.screen.width < 1000?
-                <button onClick={handleClick}>Filter</button>:
+                <button className='displayer-filter' onClick={handleClick}>Filter</button>:
                 null
-            } */}
+            }
 {
     window.screen.width < 1000&&state===false?
     <div>
@@ -82,8 +82,11 @@ const Displayer = ({ width, height }) => {
     
   
             }
-           <p onClick={handleClicksum}>{'>'}</p>
+            <div className='displayer-pagination'>
            <p  onClick={handleClickrest}>{'<'}</p>
+           <p>{game/5 +1}</p>
+           <p onClick={handleClicksum}>{'>'}</p>
+            </div>
             </div>
                 </div>
     )

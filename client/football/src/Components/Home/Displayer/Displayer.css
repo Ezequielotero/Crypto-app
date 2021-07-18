@@ -19,18 +19,30 @@
     align-items: center;
     margin-top: 2vh;
 }
+.displayer-pagination {
+    display: flex;
+    color: white;
+    font-size: 50px;
+}
+.displayer-pagination p{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.displayer-pagination p:hover{
+cursor: pointer;
+}
 @media (max-width:1000px) {
     .displayer-div{
         width: 100%;
         height: 100%;
         min-height: 100vh;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding-top: 3vw;
-        padding-bottom: 3vw;
+       
         min-width: 100vw;
     }
     .displayer-filters{
@@ -39,7 +51,9 @@
     .displayer-box{
         height: 100%;
         width: 100%;
-        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
     }
     .displayer-popup{
         display: flex;
@@ -48,5 +62,22 @@
     }
     button{
         background-color: white;
+    }
+    .displayer-pagination p{
+        color: white;
+        font-size: 60px;
+    }
+    .displayer-pagination {
+        display: flex;
+        align-items: flex-start;
+    }
+    .displayer-filter{
+        color: white;
+        font-size: 20px;
+        background-color: #8E00C4;
+        padding: 10px;
+        width: 120px;
+        border-radius: 8px;
+        margin-bottom: 15px;
     }
 }
