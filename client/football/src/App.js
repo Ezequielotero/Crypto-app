@@ -10,7 +10,8 @@ import Detail from './Components/Detail/Detail';
 function App() {
   return (
     <div>
-   <Route path={'/home'||'/detail'}><NavBar/></Route>
+   <Route path={'/detail'}><NavBar/></Route>
+   <Route path={'/home'}><NavBar/></Route>
    <Route exact path='/'><Landing/></Route>
    <Route path='/home'><Home/></Route>
    <Route path='/detail'><Detail/></Route>

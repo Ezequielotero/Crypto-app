@@ -34,12 +34,15 @@
   }
   .filter-button{
     background-color: #b117ee;
-    width: 7vw;
+    width: 120px;
     height: 7vh;
     color: white;
     border-radius: 8px;
     margin-top: 2vh;
     min-width: 100px;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    letter-spacing:1px;
   }
 
   /* Animate neon flicker */

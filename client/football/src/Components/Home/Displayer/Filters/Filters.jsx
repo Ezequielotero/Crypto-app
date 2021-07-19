@@ -33,10 +33,8 @@ const handlePlatforms =(e)=>{
   setPlatform(e.target.value)
 }
 const handleFilter =(e)=>{
-   
    dispatch(order(all,orders,genreSelected,plaftorm))
 }
-console.log(plaftorm)
     return (
         <div className='filters-box'>
           <div>
@@ -47,6 +45,7 @@ console.log(plaftorm)
         className='filters-menu'
         id="demo-simple-select"
         onClick={handleOrders}
+        defaultValue={""}
         >
           <MenuItem  value={'up'}>Rating up</MenuItem>
           <MenuItem value={'down'}>Rating down</MenuItem>
@@ -61,6 +60,7 @@ console.log(plaftorm)
         onClick={handleGenres}
         className='filters-menu'
         id="demo-simple-select"
+        defaultValue={""}
         >
           {
             genres&&genres.map((g)=>{
@@ -78,6 +78,7 @@ console.log(plaftorm)
         onClick={handlePlatforms}
         className='filters-menu'
         id="demo-simple-select"
+        defaultValue={""}
         >
           {
             platforms&&platforms.map((p)=>{

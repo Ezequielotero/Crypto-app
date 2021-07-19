@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import swal from 'sweetalert'
 export const getGames = () => {
     return async (dispatch) => {
         const games = await axios.get('http://localhost:3001/detail')
@@ -40,11 +40,21 @@ export const order =(array,order,genre,platform)=>{
         }
         if (genre) {
            array= array.filter((p)=>p.genres.includes(genre))
-           if(array.length===0) alert('none')
+           if(array.length===0)  swal({
+            title:'Nothing matched!',
+            text: 'Try filtering with another genre!',
+            icon:'error',
+            timer:2000
+          })
         }
         if (platform) {
             array= array.filter((p)=>p.platforms.includes(platform))
-            if(array.length===0) alert('none')
+            if(array.length===0)  swal({
+                title:'Nothing matched!',
+                text: 'Try filtering with another platform!',
+                icon:'error',
+                timer:2000
+              })
          }
          if (array.length>0) {
              dispatch({type:'FILTERED',payload:array})

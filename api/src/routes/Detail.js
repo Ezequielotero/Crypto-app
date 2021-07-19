@@ -11,7 +11,7 @@ router.use(cors());
 let array=[] 
 
 router.get('/', async (req, res) => {
-    let resp = await axios.get('https://api.rawg.io/api/games?key=39b9c8b123814fd0a48b1daed2d5b953&page_size=25')
+    let resp = await axios.get('https://api.rawg.io/api/games?key=39b9c8b123814fd0a48b1daed2d5b953&page_size=70')
     array=[]
     resp.data.results.forEach(game => {
       array.push({
@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
  router.get('/:id', async (req, res) => {
    array=[]
     id=req.params.id
-    let resp = await axios.get(`https://api.rawg.io/api/games/${id}?key=39b9c8b123814fd0a48b1daed2d5b953`)
+    let resp = await axios.get(`https://api.rawg.io/api/games/${id}?page=70&key=39b9c8b123814fd0a48b1daed2d5b953`)
     array.push({
       id:resp.data.id,
       slug:resp.data.slug,

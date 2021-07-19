@@ -83,9 +83,9 @@ const Displayer = ({ width, height }) => {
   
             }
             <div className='displayer-pagination'>
-           <p  onClick={handleClickrest}>{'<'}</p>
-           <p>{game/5 +1}</p>
-           <p onClick={handleClicksum}>{'>'}</p>
+           <img className='displayer-img' src='https://videosanimadosexplicativos.com/wp-content/uploads//2018/02/arrow-png-26-300x252.png' onClick={handleClickrest}></img>
+           <p>{game/5 +1}/{Math.ceil(gamemax/5)}</p>
+           <img className='displayer-img2' src='https://videosanimadosexplicativos.com/wp-content/uploads//2018/02/arrow-png-26-300x252.png' onClick={handleClicksum}></img>
             </div>
             </div>
                 </div>

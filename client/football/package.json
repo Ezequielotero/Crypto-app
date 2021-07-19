@@ -26,6 +26,8 @@
     "redux-localstorage-simple": "^2.4.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.0.19",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

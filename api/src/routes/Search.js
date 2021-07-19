@@ -12,7 +12,7 @@ let array=[]
 router.get('/', async (req, res) => {
     if(req.query.name){
       const name = req.query.name
-      let resp = await axios.get('https://api.rawg.io/api/games?key=39b9c8b123814fd0a48b1daed2d5b953&search='+name)
+      let resp = await axios.get('https://api.rawg.io/api/games?key=39b9c8b123814fd0a48b1daed2d5b953&search='+name+'&page_size=70')
       array=[]
       resp.data.results.forEach(game => {
         array.push({

@@ -19,7 +19,9 @@ const Searchbar = () => {
     return (
         <div className='searchbar-div'>
           <Input placeholder="Search videogames" onChange={handleChange} inputProps={{ 'aria-label': 'description' }} />
+          <div>
         <SearchSharpIcon  onClick={handlePost}/>
+          </div>
         
         </div>
     )
