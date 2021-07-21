@@ -15,15 +15,21 @@ export const getGenres = () => {
 }
 export const searchTitle = (title) => {
     return async (dispatch) => {
-        const resp = await axios.get('http://localhost:3001/search?name='+ title)
-        if (typeof resp.data === 'string') {
-            return alert(resp.data)
+        setTimeout(async() => {
+            let resp = await axios.get('http://localhost:3001/search?name='+ title)
+            if (typeof resp.data === 'string') {
+                return alert(resp.data)
+            }
+            if(resp.data){
+                dispatch({ type: 'SEARCH', payload: resp.data})
+                return
+            }
+            return resp
+        }, 3000);
         }
-        else{
-            dispatch({ type: 'SEARCH', payload: resp.data})
-        }
+        
     }
-}
+
 export const getPlatforms = () => {
     return async (dispatch) => {
         const resp = await axios.get('http://localhost:3001/platforms')
